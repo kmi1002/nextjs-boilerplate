@@ -10,10 +10,10 @@ const AvatarContainer = ({ src, alt, size }: T.AvatarProps) => {
     <S.Wrapper size={size}>
       <S.Picture>
         {t('common:brand.name')}
-        <S.Avatar src={src} alt={alt}/>
+        <S.Avatar src={src} alt={alt} />
       </S.Picture>
     </S.Wrapper>
-  )
+  );
 };
 
 export default AvatarContainer;
