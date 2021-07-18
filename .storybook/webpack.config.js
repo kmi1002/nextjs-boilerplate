@@ -5,6 +5,7 @@ module.exports = async ({ config, mode }) => {
     ...config.resolve,
     alias: {
       ...config.resolve.alias,
+      'next-i18next': 'react-i18next',
       '@/src': path.resolve(__dirname, '../src'),
       '@/apis': path.resolve(__dirname, '../src/apis'),
       '@/assets': path.resolve(__dirname, '../src/assets'),

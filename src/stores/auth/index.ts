@@ -29,7 +29,6 @@ const initialState: T.AuthState = {
 const authenticationReducer = (state = initialState, action: T.InitActionTypes): T.AuthState => {
   switch (action.type) {
     case T.LOGIN_SUCCESS:
-      console.log(action);
       return {
         ...state,
         authState: T.AuthStateType.LOGGED_IN,

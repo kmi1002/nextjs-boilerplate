@@ -1,16 +1,13 @@
-import { AnyAction, combineReducers, Reducer } from 'redux';
+import { combineReducers, Reducer, AnyAction, CombinedState } from 'redux';
 import { HYDRATE } from 'next-redux-wrapper';
-import { AuthState } from '@/stores/auth/type';
 import auth from './auth';
+import { AuthState } from './auth/type';
 
 interface RootStateInterface {
   auth: AuthState;
 }
 
-const rootReducer: Reducer<RootStateInterface, { type: typeof HYDRATE; payload: RootStateInterface }> = (
-  state,
-  action,
-) => {
+const rootReducer = (state: RootStateInterface | undefined, action: AnyAction): CombinedState<RootStateInterface> => {
   switch (action.type) {
     case HYDRATE: {
       const nextState = { ...state, ...action.payload };

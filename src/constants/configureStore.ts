@@ -2,7 +2,7 @@ import { applyMiddleware, createStore, Middleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { createWrapper } from 'next-redux-wrapper';
-import { persistReducer } from 'redux-persist';
+import { persistReducer, persistStore } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import rootReducer from '@/stores/index';
 import rootSaga from '@/sagas/index';
@@ -28,8 +28,7 @@ const makeStore = () => {
   };
 
   const persistedReducer = persistReducer(persistConfig, rootReducer);
-
-  const store = createStore(persistedReducer, bindMiddleware([...middlewares]));
+  const store = createStore(persistedReducer, undefined, bindMiddleware([...middlewares]));
   store.sagaTask = sagaMiddleware.run(rootSaga);
 
   return store;

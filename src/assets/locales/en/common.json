@@ -1,0 +1,37 @@
+{
+  "company": {
+    "name": {
+      "ko": "company",
+      "en": ""
+    },
+    "address": {
+      "key": "address",
+      "value": ""
+    },
+    "ceo": {
+      "key": "ceo",
+      "value": ""
+    },
+    "crn": {
+      "key": "crn",
+      "value": ""
+    },
+    "email": {
+      "key": "email",
+      "value": ""
+    },
+    "tel": {
+      "key": "tel",
+      "value": ""
+    }
+  },
+  "brand": {
+    "name": "Brand",
+    "slogan": "",
+    "startYear": 2020
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout"
+  }
+}

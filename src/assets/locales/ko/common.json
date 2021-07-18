@@ -1,0 +1,37 @@
+{
+  "company": {
+    "name": {
+      "ko": "",
+      "en": ""
+    },
+    "address": {
+      "key": "주소",
+      "value": ""
+    },
+    "ceo": {
+      "key": "대표 이사",
+      "value": ""
+    },
+    "crn": {
+      "key": "사업자등록번호",
+      "value": ""
+    },
+    "email": {
+      "key": "전자우편",
+      "value": ""
+    },
+    "tel": {
+      "key": "전화번호",
+      "value": ""
+    }
+  },
+  "brand": {
+    "name": "브랜드",
+    "slogan": "",
+    "startYear": 2020
+  },
+  "auth": {
+    "login": "로그인",
+    "logout": "로그아웃"
+  }
+}
